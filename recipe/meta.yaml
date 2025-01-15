@@ -24,6 +24,7 @@ requirements:
     - libksba
     - libgcrypt
     - zlib
+    - libgpg-error
 
 about:
   home: https://www.gnupg.org/software/ntbtls/index.html
