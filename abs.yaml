@@ -1,3 +1,6 @@
 upload_channels:
   - sfe1ed40
 
+channels:
+  - https://staging.continuum.io/prefect/fs/libksba-feedstock/pr1/5ff17d0
+

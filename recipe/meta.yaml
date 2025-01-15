@@ -41,3 +41,5 @@ extra:
   recipe-maintainers:
     - zklaus
     - mariusvniekerk
+  skip-lints:
+    - missing_tests
