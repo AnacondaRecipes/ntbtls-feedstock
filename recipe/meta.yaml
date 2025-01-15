@@ -23,6 +23,7 @@ requirements:
   host:
     - libksba
     - libgcrypt
+    - zlib
 
 about:
   home: https://www.gnupg.org/software/ntbtls/index.html
