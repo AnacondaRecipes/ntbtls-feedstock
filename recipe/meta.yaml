@@ -21,10 +21,10 @@ requirements:
     - {{ compiler('c') }}
     - make
   host:
-    - libksba >=1.6.7
-    - libgcrypt >=1.9.3
+    - libksba 1.6.7
+    - libgcrypt 1.9.3
     - zlib {{ zlib }}
-    - libgpg-error >= 1.51
+    - libgpg-error 1.51
 
 about:
   home: https://www.gnupg.org/software/ntbtls/index.html
