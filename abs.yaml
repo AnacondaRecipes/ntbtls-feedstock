@@ -4,4 +4,3 @@ upload_channels:
 channels:
   - https://staging.continuum.io/prefect/fs/libksba-feedstock/pr1/d20a179
   - https://staging.continuum.io/prefect/fs/libgpg-error-feedstock/pr3/9837494
-
