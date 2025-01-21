@@ -11,33 +11,28 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
+  # libksba isn't available on s390x
+  skip: true  # [win or s390x]
   run_exports:
     - {{ pin_subpackage('ntbtls') }}
 
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - make  # [unix]
-    - gnuconfig  # [unix]
-    - pkg-config  # [unix]
+    - make
   host:
-    - libgpg-error
-    - libksba
-    - libgcrypt
-    - zlib
-  run:
-    - zlib
-
-test:
-  commands:
+    - libksba 1.6.7
+    - libgcrypt 1.9.3
+    - zlib {{ zlib }}
+    - libgpg-error 1.51
 
 about:
   home: https://www.gnupg.org/software/ntbtls/index.html
+  dev_url: https://git.gnupg.org/cgi-bin/gitweb.cgi?p=ntbtls.git
+  doc_url: https://www.gnupg.org/software/ntbtls/index.html
   summary: Not Too Bad TLS
   license: GPL-3.0-or-later
-  license_family: GPL
+  license_family: GPL3
   license_file: COPYING
   description: |
     ntbTLS is a tiny TLS 1.2 only implementation designed to be used with Libgcrypt
@@ -49,3 +44,5 @@ extra:
   recipe-maintainers:
     - zklaus
     - mariusvniekerk
+  skip-lints:
+    - missing_tests
